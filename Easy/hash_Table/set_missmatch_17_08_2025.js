@@ -9,16 +9,19 @@
  * @return {number[]}
  */
 var findErrorNums = function(nums) {
-    let j = 1;
-    let result = [];
-    for(let i=0; i<nums.length; i++){
-        if (nums[i] !== j){
-            result.push(nums[i])
-            result.push(j)
-        }
-        j++;
+    let n = nums.length;
+    let count = new Array(n+1).fill(0);
+    
+    for(let num of nums){
+        count[num]++;
     }
-    return result;
+
+    let duplicate ; let missing;
+    for(let i=1; i<=n; i++){
+        if(count[i] == 2) duplicate = i;
+        if(count[i] == 0) missing = i;
+    }
+    return [duplicate , missing]
 };
 
-console.log(findErrorNums([1,2,2,4]));
+console.log(findErrorNums([2,2,3,4]));
