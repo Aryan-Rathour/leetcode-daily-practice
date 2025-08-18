@@ -21,8 +21,8 @@ var findShortestSubArray = function(nums) {
 
     for(let val of highestElement){
         let numVal = Number(val);
-        let firstIndex = nums.indexOf(val);
-        let lastIndex = nums.lastIndexOf(val);
+        let firstIndex = nums.indexOf(numVal);
+        let lastIndex = nums.lastIndexOf(numVal);
         let length = (lastIndex - firstIndex) + 1;
         minLength = Math.min(minLength, length)
     }
@@ -31,4 +31,4 @@ var findShortestSubArray = function(nums) {
     
 };
 
-console.log(findShortestSubArray([1,2,2,3,1]));
+console.log(findShortestSubArray([1,2,2,3,1,4,2]));
