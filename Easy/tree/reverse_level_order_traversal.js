@@ -27,8 +27,7 @@ class Solution {
 
         queue.push(root);
         while(queue.length > 0){
-            let node = queue.shift();
-
+            let node = queue.shift();\.05454544444444444
             result.push(node.data)
 
             if(node.right) queue.push(node.right);
