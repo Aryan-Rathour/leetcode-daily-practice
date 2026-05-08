@@ -25,7 +25,7 @@ const height = (root) => {
 
 class Solution {
     diameter(root) {
-        
+        ans = 0
         height(root);
 
         return ans;
